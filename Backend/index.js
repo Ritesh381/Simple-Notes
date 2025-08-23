@@ -7,10 +7,14 @@ const cors = require("cors");
 const PORT = process.env.PORT || 8080;
 app = express();
 app.use(cors({
-  origin: "http://localhost:5173", // your React dev server
+  origin: [
+    "http://localhost:5173",       // React dev server
+    "https://simp-notes.vercel.app" // your deployed frontend
+  ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  credentials: true, // if you plan to send cookies
-}))
+  credentials: true, // needed if sending cookies/auth headers
+}));
+
 
 app.use(express.json());
 app.use("/auth", authRoutes);
