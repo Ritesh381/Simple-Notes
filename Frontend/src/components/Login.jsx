@@ -2,6 +2,7 @@ import React, { use, useMemo, useState } from "react";
 import SplitText from "../ui/SplitText";
 import GooeyNav from "../ui/GooeyNav";
 import { Link, useNavigate } from "react-router-dom";
+import api from "../api/axios";
 
 const items = [
   { label: "Login", href: "#" },
@@ -77,11 +78,13 @@ function Auth() {
     );
   }
 
+  const API_URL = "https://simple-notes-km3c.onrender.com";
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setMessage("");
     try {
-      const res = await fetch("http://localhost:8080/auth/login", {
+      const res = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, pass: password }),
@@ -93,8 +96,7 @@ function Auth() {
         localStorage.setItem("token", data.token);
         localStorage.setItem("username", username);
         localStorage.setItem("name", data.name);
-        // Redirect to home or notes page
-        navigate("/");
+        navigate("/"); // redirect
       } else {
         setMessage(data.message || "Login failed");
       }
@@ -108,7 +110,7 @@ function Auth() {
     e.preventDefault();
     setMessage("");
     try {
-      const res = await fetch("http://localhost:8080/auth/register", {
+      const res = await fetch(`${API_URL}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, pass: password, name }),
