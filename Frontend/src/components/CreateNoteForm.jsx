@@ -29,11 +29,12 @@ function CreateNoteForm({ onSubmit, onCancel, setColorPickerOpen }) {
     e.preventDefault();
     const note = { title, color, category, body };
 
-    localStorage.clear();
-    setTitle("");
-    setColor("#8b5cf6");
-    setCategory("none");
-    setBody("");
+    if(localStorage.getItem("token") === null) {
+      alert("You must be logged in to create a note.");
+      return;
+    }else{
+      
+    }
 
     onSubmit?.(note);
   };

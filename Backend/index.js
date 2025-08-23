@@ -4,6 +4,7 @@ require("dotenv").config();
 const authRoutes = require("./routes/auth");
 const cors = require("cors");
 
+const PORT = process.env.PORT || 8080;
 app = express();
 app.use(cors({
   origin: "http://localhost:5173", // your React dev server
@@ -23,4 +24,4 @@ app.get("/", (req, res) => {
   res.send("Backend running with MonogDB connected");
 });
 
-app.listen(8080, () => console.log("server running at https://localhost:8080"));
+app.listen(PORT, () => console.log(`server running on port ${PORT}`));

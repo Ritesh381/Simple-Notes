@@ -6,12 +6,30 @@ import SplitText from "../ui/SplitText";
 import { useNavigate } from "react-router-dom";
 
 function NavBar({ onAddNote }) {
-  const [showDropdown, setShowDropdown] = useState(false);
-  const navigate = useNavigate();
-
   const handleAnimationComplete = () => {
     console.log("All letters have animated!");
   };
+  const splitTextElement = React.useMemo(
+    () => (
+      <SplitText
+        text="Simple Notes"
+        className="text-2xl font-semibold text-center"
+        delay={100}
+        duration={0.6}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="center"
+        onLetterAnimationComplete={handleAnimationComplete}
+      />
+    ),
+    []
+  );
+  const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     if (!localStorage.getItem("token")) {
@@ -31,20 +49,7 @@ function NavBar({ onAddNote }) {
         <div className="flex items-center justify-between h-16">
           {/* Left Section */}
           <div className="flex items-center space-x-4">
-            <SplitText
-              text="Simple Notes"
-              className="text-2xl font-semibold text-center cursor-pointer"
-              delay={100}
-              duration={0.6}
-              ease="power3.out"
-              splitType="chars"
-              from={{ opacity: 0, y: 40 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="-100px"
-              textAlign="center"
-              onLetterAnimationComplete={handleAnimationComplete}
-            />
+            {splitTextElement}
             {/* Plus Button */}
             <button
               onClick={onAddNote}
@@ -85,25 +90,29 @@ function NavBar({ onAddNote }) {
                 <div className="relative">
                   <button
                     onClick={() => setShowDropdown(!showDropdown)}
-                    className="focus:outline-none"
+                    className="relative focus:outline-none group"
                   >
                     <img
                       src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png"
                       alt="Profile"
                       className="w-10 h-10 rounded-full border-2 border-white"
                     />
+                    <span className="absolute left-1/2 -translate-x-1/2 -bottom-10 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-1">
+                      Hello, {localStorage.getItem("name") || "User"}
+                    </span>
                   </button>
 
                   {/* Dropdown */}
                   {showDropdown && (
-                    <div className="absolute right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg shadow-lg z-50">
-                      <button
+                    <div className="absolute right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg shadow-lg ">
+                      {localStorage.getItem("token") &&
+                        <button
                         onClick={() => navigate("/profile")}
                         className="flex items-center w-full px-4 py-2 text-left text-white hover:bg-gray-800"
                       >
                         <User className="w-4 h-4 mr-2" />
                         Profile
-                      </button>
+                      </button>}
                       <button
                         onClick={handleLogout}
                         className={
