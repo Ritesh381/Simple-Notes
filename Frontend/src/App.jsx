@@ -7,7 +7,6 @@ import NotesContainer from "./components/NotesContainer";
 import Login from "./components/Login";
 import DotGrid from "./ui/DotGrid";
 import CreateNote from "./components/CreateNote";
-import AuthNavBar from "./components/AuthNavBar";
 
 function App() {
   const [showCreateNote, setShowCreateNote] = useState(false);
@@ -15,7 +14,7 @@ function App() {
     <div className="relative min-h-screen">
       {/* Background */}
       <div
-        style={{ width: "100%", height: "100%", position: "absolute" }}
+        style={{ width: "100%", height: "100%", position: "absolute", zIndex:0}}
         className="bg-black"
       >
         <DotGrid
@@ -47,7 +46,7 @@ function App() {
               </>
             }
           />
-          <Route path="/auth" element={<div><AuthNavBar/><Login /></div>} />
+          <Route path="/auth" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>

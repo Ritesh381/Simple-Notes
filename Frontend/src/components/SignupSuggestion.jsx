@@ -3,7 +3,9 @@ import GradientText from "../ui/GradientText";
 import { Link } from "react-router-dom";
 
 function SignupSuggestion() {
-
+  if(localStorage.getItem("token")){ 
+    return null;
+  }
   return (
     <div className="">
       <GradientText
