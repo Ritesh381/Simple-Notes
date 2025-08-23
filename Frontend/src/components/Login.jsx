@@ -63,9 +63,7 @@ function Auth() {
             </button>
             <button
               onClick={() => {
-                localStorage.removeItem("token");
-                localStorage.removeItem("username");
-                localStorage.removeItem("name");
+                localStorage.clear();
                 navigate("/auth");
               }}
               className="px-4 py-2 bg-red-500 rounded hover:bg-red-600 z-10"
@@ -96,6 +94,7 @@ function Auth() {
         localStorage.setItem("token", data.token);
         localStorage.setItem("username", username);
         localStorage.setItem("name", data.name);
+        localStorage.setItem("userId", data.id);
         navigate("/"); // redirect
       } else {
         setMessage(data.message || "Login failed");

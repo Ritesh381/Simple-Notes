@@ -28,7 +28,7 @@ function CreateNoteForm({ onSubmit, onCancel, setColorPickerOpen }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const note = { title, color, category, body };
-
+    
     if(localStorage.getItem("token") === null) {
       alert("You must be logged in to create a note.");
       return;
