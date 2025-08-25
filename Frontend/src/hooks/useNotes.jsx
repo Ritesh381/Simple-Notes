@@ -22,7 +22,9 @@ export function NotesProvider({ children }) {
   const fetchNotes = async (userId) => {
     try {
       setLoading(true);
-      const res = await api.get(`/notes`);
+      const res = await api.get("/api/notes", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setNotes(res.data);
       setLoading(false);
     } catch (err) {
@@ -37,6 +39,7 @@ export function NotesProvider({ children }) {
       const res = await api.post("/notes", {
         ...note,
         created_by: user.userId,
+        headers: { Authorization: `Bearer ${token}` },
       });
       setNotes((prev) => [...prev, res.data]);
     } catch (err) {
@@ -46,7 +49,9 @@ export function NotesProvider({ children }) {
 
   const removeNote = async (id) => {
     try {
-      await api.delete(`/notes/${id}`);
+      await api.delete(`/notes/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setNotes((prev) => prev.filter((n) => n._id !== id));
     } catch (err) {
       console.error("Error deleting note:", err);
@@ -55,7 +60,9 @@ export function NotesProvider({ children }) {
 
   const updateNote = async (id, updatedFields) => {
     try {
-      const res = await api.put(`/notes/${id}`, updatedFields);
+      const res = await api.put(`/notes/${id}`, updatedFields, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setNotes((prev) => prev.map((n) => (n._id === id ? res.data : n)));
     } catch (err) {
       console.error("Error updating note:", err);
@@ -63,7 +70,9 @@ export function NotesProvider({ children }) {
   };
 
   return (
-    <NotesContext.Provider value={{ notes, addNote, removeNote, updateNote, loading }}>
+    <NotesContext.Provider
+      value={{ notes, addNote, removeNote, updateNote, loading }}
+    >
       {children}
     </NotesContext.Provider>
   );

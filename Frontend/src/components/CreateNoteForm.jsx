@@ -1,6 +1,5 @@
 import React, { useRef, useState, forwardRef } from "react";
 import SpotlightCard from "../ui/SpotlightCard";
-import api from "../api/axios";
 import { useNotes } from "../hooks/useNotes";
 import { useUser } from "../hooks/useUsers";
 

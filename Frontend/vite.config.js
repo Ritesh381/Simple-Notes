@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://simple-notes-km3c.onrender.com",
+        target:"https://simple-notes-km3c.onrender.com/api",
         changeOrigin: true,
         secure: false,
       },

@@ -52,11 +52,10 @@ app.get("/", (req, res) => {
 
 // Error handler
 app.use((err, req, res, next) => {
-  console.error(
-    `[${new Date().toISOString()}] ❌ ERROR ${req.method} ${req.originalUrl} from ${req.ip}: ${err.message}`
-  );
+  console.error(`[${new Date().toISOString()}] ❌ ERROR ${req.method} ${req.originalUrl} from ${req.ip}: ${err.stack}`);
   res.status(500).json({ error: err.message });
 });
+
 
 // Start server
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
