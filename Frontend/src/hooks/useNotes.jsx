@@ -22,8 +22,8 @@ export function NotesProvider({ children }) {
   const fetchNotes = async (userId) => {
     try {
       setLoading(true);
-      const res = await api.get("/api/notes", {
-        headers: { Authorization: `Bearer ${token}` },
+      const res = await api.get("/notes", {
+        headers: { Authorization: `Bearer ${user.token}` },
       });
       setNotes(res.data);
       setLoading(false);
@@ -39,7 +39,7 @@ export function NotesProvider({ children }) {
       const res = await api.post("/notes", {
         ...note,
         created_by: user.userId,
-        headers: { Authorization: `Bearer ${token}` },
+        headers: { Authorization: `Bearer ${user.token}` },
       });
       setNotes((prev) => [...prev, res.data]);
     } catch (err) {
@@ -50,7 +50,7 @@ export function NotesProvider({ children }) {
   const removeNote = async (id) => {
     try {
       await api.delete(`/notes/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
+        headers: { Authorization: `Bearer ${user.token}` },
       });
       setNotes((prev) => prev.filter((n) => n._id !== id));
     } catch (err) {
@@ -61,7 +61,7 @@ export function NotesProvider({ children }) {
   const updateNote = async (id, updatedFields) => {
     try {
       const res = await api.put(`/notes/${id}`, updatedFields, {
-        headers: { Authorization: `Bearer ${token}` },
+        headers: { Authorization: `Bearer ${user.token}` },
       });
       setNotes((prev) => prev.map((n) => (n._id === id ? res.data : n)));
     } catch (err) {
