@@ -30,8 +30,7 @@ app.use((req, res, next) => {
 
 app.use(cors({
   origin: [
-    "http://localhost:5173",       // React dev server
-    "https://simp-notes.vercel.app" // your deployed frontend
+   "*"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,

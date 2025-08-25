@@ -389,3 +389,5 @@
 [2025-08-25T07:25:43.984Z] POST /notes from ::1
 [2025-08-25T07:27:01.906Z] OPTIONS /notes from ::1
 [2025-08-25T07:27:01.907Z] GET /notes from ::1
+[2025-08-25T07:31:10.772Z] 🚀 Server running on port 8080
+[2025-08-25T07:31:11.260Z] ✅ Connected to MongoDB
