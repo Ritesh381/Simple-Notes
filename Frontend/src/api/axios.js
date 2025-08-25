@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://simple-notes-km3c.onrender.com",
-  // baseURL: "http://localhost:8080",
+    baseURL: import.meta.env.VITE_BACKEND_URL,
   headers: {
     "Content-Type": "application/json",
   },
