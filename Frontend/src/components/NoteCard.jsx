@@ -7,6 +7,17 @@ const springValues = {
   mass: 2,
 };
 
+function getContrastColor(hex) {
+  const r = parseInt(hex.substring(1, 3), 16);
+  const g = parseInt(hex.substring(3, 5), 16);
+  const b = parseInt(hex.substring(5, 7), 16);
+
+  // Perceived luminance formula
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+  return luminance > 0.6 ? "black" : "white"; 
+}
+
 export default function NoteCard({
   title,
   body = "",
@@ -18,6 +29,7 @@ export default function NoteCard({
   showMobileWarning = true,
   showTooltip = true,
   color = "#5f4747ff",
+  category = "General",
 }) {
   const ref = useRef(null);
   const x = useMotionValue(0);
@@ -33,6 +45,7 @@ export default function NoteCard({
   });
 
   const [lastY, setLastY] = useState(0);
+  const textColor = getContrastColor(color);
 
   function handleMouse(e) {
     if (!ref.current) return;
@@ -100,9 +113,10 @@ export default function NoteCard({
       >
         {/* Title like in your screenshot */}
         <motion.div
-          className="absolute top-4 left-1/2 -translate-x-1/2 text-white font-bold px-4 py-2 rounded-xl text-sm max-w-[90%] truncate"
+          className="absolute top-4 left-1/2 -translate-x-1/2 font-bold px-4 py-2 rounded-xl text-sm max-w-[90%] truncate"
           style={{
             backgroundColor: color,
+            color: textColor,
             boxShadow: "0 7px 10px rgba(0, 0, 0, 0.25)",
           }}
         >

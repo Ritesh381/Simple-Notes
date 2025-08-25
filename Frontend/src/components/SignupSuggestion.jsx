@@ -1,9 +1,11 @@
 import React from "react";
 import GradientText from "../ui/GradientText";
 import { Link } from "react-router-dom";
+import { useUser } from "../hooks/useUsers";
 
 function SignupSuggestion() {
-  if(localStorage.getItem("token")){ 
+  const { user } = useUser();
+  if(user){ 
     return null;
   }
   return (

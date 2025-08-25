@@ -1,0 +1,391 @@
+[2025-08-24T05:37:34.323Z] 🚀 Server running on port 8080
+[2025-08-24T05:37:34.703Z] 🚀 Server running on port 8080
+[2025-08-24T05:37:35.325Z] ✅ Connected to MongoDB
+[2025-08-24T05:43:52.868Z] 🚀 Server running on port 8080
+[2025-08-24T05:43:54.559Z] 🚀 Server running on port 8080
+[2025-08-24T05:43:55.707Z] ✅ Connected to MongoDB
+[2025-08-24T05:43:59.337Z] 🚀 Server running on port 8080
+[2025-08-24T05:43:59.702Z] ✅ Connected to MongoDB
+[2025-08-24T05:44:58.986Z] 🚀 Server running on port 8080
+[2025-08-24T05:44:59.518Z] ✅ Connected to MongoDB
+[2025-08-24T16:05:30.618Z] 🚀 Server running on port 8080
+[2025-08-24T16:05:31.277Z] ✅ Connected to MongoDB
+[2025-08-24T16:19:45.271Z] OPTIONS /notes from ::1
+[2025-08-24T16:19:45.277Z] POST /notes from ::1
+[2025-08-24T16:19:45.292Z] OPTIONS /notes from ::1
+[2025-08-24T16:19:45.294Z] POST /notes from ::1
+[2025-08-24T16:41:20.413Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:41:20.416Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:43:05.899Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:43:05.901Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:39.835Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:39.839Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:52.076Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:52.080Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:52.556Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:52.559Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:52.943Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:52.947Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.142Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.147Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.326Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.329Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.503Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.507Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.672Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.675Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.860Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:53.862Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:54.080Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:44:54.082Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:45:42.836Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:45:42.840Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:45:48.825Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:45:48.838Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:46:36.020Z] OPTIONS /notes from ::1
+[2025-08-24T16:46:36.021Z] OPTIONS /notes from ::1
+[2025-08-24T16:46:36.023Z] POST /notes from ::1
+[2025-08-24T16:46:36.024Z] POST /notes from ::1
+[2025-08-24T16:46:45.967Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:46:45.970Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:46:48.484Z] OPTIONS /notes from ::1
+[2025-08-24T16:46:48.486Z] OPTIONS /notes from ::1
+[2025-08-24T16:46:48.487Z] POST /notes from ::1
+[2025-08-24T16:46:48.487Z] POST /notes from ::1
+[2025-08-24T16:51:38.620Z] OPTIONS /auth/login from ::1
+[2025-08-24T16:51:38.623Z] POST /auth/login from ::1
+[2025-08-24T16:51:38.765Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:51:38.781Z] OPTIONS /notes from ::1
+[2025-08-24T16:51:38.782Z] OPTIONS /notes from ::1
+[2025-08-24T16:51:38.782Z] POST /notes from ::1
+[2025-08-24T16:51:38.783Z] POST /notes from ::1
+[2025-08-24T16:52:54.835Z] OPTIONS /notes from ::1
+[2025-08-24T16:52:54.836Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:52:54.839Z] POST /notes from ::1
+[2025-08-24T16:52:54.840Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:52:54.841Z] POST /notes from ::1
+[2025-08-24T16:53:05.016Z] OPTIONS /notes from ::1
+[2025-08-24T16:53:05.017Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:53:05.017Z] POST /notes from ::1
+[2025-08-24T16:53:05.019Z] POST /notes from ::1
+[2025-08-24T16:53:05.019Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:55:07.974Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:55:07.977Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:55:09.553Z] OPTIONS /notes from ::1
+[2025-08-24T16:55:09.555Z] POST /notes from ::1
+[2025-08-24T16:55:09.556Z] POST /notes from ::1
+[2025-08-24T16:57:47.861Z] OPTIONS /notes from ::1
+[2025-08-24T16:57:47.864Z] POST /notes from ::1
+[2025-08-24T16:57:47.865Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:57:47.867Z] POST /notes from ::1
+[2025-08-24T16:57:47.868Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:57:57.839Z] OPTIONS /notes from ::1
+[2025-08-24T16:57:57.852Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:57:57.853Z] POST /notes from ::1
+[2025-08-24T16:57:57.860Z] POST /notes from ::1
+[2025-08-24T16:57:57.861Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:58:00.855Z] POST /notes from ::1
+[2025-08-24T16:58:00.856Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:58:00.859Z] POST /notes from ::1
+[2025-08-24T16:58:00.860Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:58:06.498Z] OPTIONS /notes from ::1
+[2025-08-24T16:58:06.499Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T16:58:06.500Z] POST /notes from ::1
+[2025-08-24T16:58:06.501Z] POST /notes from ::1
+[2025-08-24T16:58:06.502Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T17:00:28.132Z] OPTIONS /notes from ::1
+[2025-08-24T17:00:28.132Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T17:00:28.133Z] POST /notes from ::1
+[2025-08-24T17:00:28.134Z] POST /notes from ::1
+[2025-08-24T17:00:28.135Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T17:00:30.450Z] POST /notes from ::1
+[2025-08-24T17:00:30.452Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T17:00:30.454Z] POST /notes from ::1
+[2025-08-24T17:00:30.455Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T17:00:36.108Z] OPTIONS /notes from ::1
+[2025-08-24T17:00:36.109Z] OPTIONS /notes from ::1
+[2025-08-24T17:00:36.110Z] POST /notes from ::1
+[2025-08-24T17:00:36.112Z] POST /notes from ::1
+[2025-08-24T17:00:42.023Z] OPTIONS /notes from ::1
+[2025-08-24T17:00:42.024Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T17:00:42.024Z] POST /notes from ::1
+[2025-08-24T17:00:42.026Z] POST /notes from ::1
+[2025-08-24T17:00:42.027Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T17:00:43.003Z] POST /notes from ::1
+[2025-08-24T17:00:43.003Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T17:00:43.005Z] POST /notes from ::1
+[2025-08-24T17:00:43.005Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-24T17:02:00.014Z] OPTIONS /notes from ::1
+[2025-08-24T17:02:00.015Z] POST /notes from ::1
+[2025-08-24T17:02:00.016Z] POST /notes from ::1
+[2025-08-24T17:02:01.013Z] POST /notes from ::1
+[2025-08-24T17:02:01.016Z] POST /notes from ::1
+[2025-08-24T17:03:22.815Z] OPTIONS /notes from ::1
+[2025-08-24T17:03:22.818Z] POST /notes from ::1
+[2025-08-24T17:03:22.822Z] POST /notes from ::1
+[2025-08-24T17:05:13.996Z] OPTIONS /notes from ::1
+[2025-08-24T17:05:13.997Z] POST /notes from ::1
+[2025-08-24T17:05:13.998Z] OPTIONS /notes from ::1
+[2025-08-24T17:05:14.000Z] POST /notes from ::1
+[2025-08-24T17:06:25.724Z] OPTIONS /notes from ::1
+[2025-08-24T17:06:25.726Z] POST /notes from ::1
+[2025-08-24T17:06:25.726Z] OPTIONS /notes from ::1
+[2025-08-24T17:06:25.727Z] POST /notes from ::1
+[2025-08-25T05:21:53.123Z] OPTIONS /auth/login from ::1
+[2025-08-25T05:21:53.127Z] POST /auth/login from ::1
+[2025-08-25T05:23:05.098Z] 🚀 Server running on port 8080
+[2025-08-25T05:23:28.929Z] OPTIONS /auth/login from ::1
+[2025-08-25T05:23:28.933Z] POST /auth/login from ::1
+[2025-08-25T05:23:35.420Z] ❌ Mongo Error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+[2025-08-25T05:28:31.638Z] OPTIONS /auth/login from ::1
+[2025-08-25T05:28:31.641Z] POST /auth/login from ::1
+[2025-08-25T05:29:32.391Z] OPTIONS /auth/login from ::1
+[2025-08-25T05:29:32.393Z] POST /auth/login from ::1
+[2025-08-25T05:30:19.305Z] OPTIONS /auth/login from ::1
+[2025-08-25T05:30:19.308Z] POST /auth/login from ::1
+[2025-08-25T05:38:54.952Z] 🚀 Server running on port 8080
+[2025-08-25T05:38:55.875Z] 🚀 Server running on port 8080
+[2025-08-25T05:39:00.769Z] ✅ Connected to MongoDB
+[2025-08-25T05:39:53.169Z] 🚀 Server running on port 8080
+[2025-08-25T05:40:09.118Z] 🚀 Server running on port 8080
+[2025-08-25T05:40:11.258Z] 🚀 Server running on port 8080
+[2025-08-25T05:40:17.274Z] 🚀 Server running on port 8080
+[2025-08-25T05:40:17.571Z] 🚀 Server running on port 8080
+[2025-08-25T05:40:19.493Z] 🚀 Server running on port 8080
+[2025-08-25T05:40:19.953Z] 🚀 Server running on port 8080
+[2025-08-25T05:40:34.554Z] ✅ Connected to MongoDB
+[2025-08-25T05:40:39.793Z] 🚀 Server running on port 8080
+[2025-08-25T05:40:54.023Z] ✅ Connected to MongoDB
+[2025-08-25T05:40:58.267Z] 🚀 Server running on port 8080
+[2025-08-25T05:41:06.793Z] ✅ Connected to MongoDB
+[2025-08-25T05:44:56.374Z] 🚀 Server running on port 8080
+[2025-08-25T05:44:58.729Z] ✅ Connected to MongoDB
+[2025-08-25T05:45:00.288Z] 🚀 Server running on port 8080
+[2025-08-25T05:45:02.008Z] ✅ Connected to MongoDB
+[2025-08-25T05:45:02.278Z] 🚀 Server running on port 8080
+[2025-08-25T05:45:03.230Z] 🚀 Server running on port 8080
+[2025-08-25T05:45:05.688Z] ✅ Connected to MongoDB
+[2025-08-25T05:45:41.565Z] 🚀 Server running on port 8080
+[2025-08-25T05:45:41.875Z] 🚀 Server running on port 8080
+[2025-08-25T05:45:44.294Z] ✅ Connected to MongoDB
+[2025-08-25T05:54:16.307Z] OPTIONS /auth/login from ::1
+[2025-08-25T05:54:16.312Z] POST /auth/login from ::1
+[2025-08-25T05:55:17.597Z] OPTIONS /auth/login from ::1
+[2025-08-25T05:55:17.598Z] POST /auth/login from ::1
+[2025-08-25T05:55:17.860Z] OPTIONS /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-25T05:55:17.861Z] GET /notes/68a98b8a5c194cfcb2c72827 from ::1
+[2025-08-25T05:56:36.099Z] OPTIONS /auth/register from ::1
+[2025-08-25T05:56:36.102Z] POST /auth/register from ::1
+[2025-08-25T06:02:17.873Z] OPTIONS /auth/login from ::1
+[2025-08-25T06:02:17.875Z] POST /auth/login from ::1
+[2025-08-25T06:02:18.276Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:02:18.278Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:05:14.232Z] OPTIONS /auth/login from ::1
+[2025-08-25T06:05:14.235Z] POST /auth/login from ::1
+[2025-08-25T06:05:14.583Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:05:14.585Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:08:50.785Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:08:50.787Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:10:11.088Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:10:11.090Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:10:28.714Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:10:28.715Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:11:45.996Z] OPTIONS /note/create from ::1
+[2025-08-25T06:11:45.998Z] POST /note/create from ::1
+[2025-08-25T06:12:31.553Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:12:31.554Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:13:13.008Z] OPTIONS /notes from ::1
+[2025-08-25T06:13:13.011Z] POST /notes from ::1
+[2025-08-25T06:13:55.250Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:13:55.251Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:15:05.460Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:15:05.461Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:15:30.603Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:15:30.605Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:15:31.561Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:16:34.554Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:16:34.555Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:16:35.543Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:18:38.560Z] OPTIONS /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:18:38.562Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:18:40.555Z] GET /notes/68abfb14f883e31b68b5ff8d from ::1
+[2025-08-25T06:18:46.523Z] OPTIONS /notes from ::1
+[2025-08-25T06:18:46.524Z] GET /notes from ::1
+[2025-08-25T06:18:56.522Z] OPTIONS /notes from ::1
+[2025-08-25T06:18:56.524Z] GET /notes from ::1
+[2025-08-25T06:19:09.712Z] OPTIONS /notes from ::1
+[2025-08-25T06:19:09.713Z] GET /notes from ::1
+[2025-08-25T06:19:12.561Z] GET /notes from ::1
+[2025-08-25T06:19:20.847Z] OPTIONS /notes from ::1
+[2025-08-25T06:19:20.849Z] GET /notes from ::1
+[2025-08-25T06:19:27.696Z] OPTIONS /notes from ::1
+[2025-08-25T06:19:27.698Z] GET /notes from ::1
+[2025-08-25T06:19:41.295Z] OPTIONS /notes from ::1
+[2025-08-25T06:19:41.296Z] POST /notes from ::1
+[2025-08-25T06:21:03.450Z] OPTIONS /notes from ::1
+[2025-08-25T06:21:03.451Z] GET /notes from ::1
+[2025-08-25T06:22:07.928Z] OPTIONS /notes from ::1
+[2025-08-25T06:22:07.930Z] GET /notes from ::1
+[2025-08-25T06:22:10.486Z] GET /notes from ::1
+[2025-08-25T06:22:20.128Z] OPTIONS /notes from ::1
+[2025-08-25T06:22:20.129Z] GET /notes from ::1
+[2025-08-25T06:23:22.447Z] OPTIONS /notes from ::1
+[2025-08-25T06:23:22.448Z] GET /notes from ::1
+[2025-08-25T06:23:27.984Z] OPTIONS /notes from ::1
+[2025-08-25T06:23:27.986Z] GET /notes from ::1
+[2025-08-25T06:23:34.159Z] OPTIONS /notes from ::1
+[2025-08-25T06:23:34.161Z] GET /notes from ::1
+[2025-08-25T06:24:20.455Z] OPTIONS /notes from ::1
+[2025-08-25T06:24:20.457Z] GET /notes from ::1
+[2025-08-25T06:24:26.561Z] OPTIONS /notes from ::1
+[2025-08-25T06:24:26.563Z] GET /notes from ::1
+[2025-08-25T06:29:48.334Z] OPTIONS /notes from ::1
+[2025-08-25T06:29:48.337Z] GET /notes from ::1
+[2025-08-25T06:29:50.332Z] GET /notes from ::1
+[2025-08-25T06:30:11.508Z] OPTIONS /notes from ::1
+[2025-08-25T06:30:11.509Z] GET /notes from ::1
+[2025-08-25T06:30:21.367Z] OPTIONS /notes from ::1
+[2025-08-25T06:30:21.368Z] GET /notes from ::1
+[2025-08-25T06:30:24.488Z] GET /notes from ::1
+[2025-08-25T06:33:01.430Z] OPTIONS /auth/login from ::1
+[2025-08-25T06:33:01.432Z] POST /auth/login from ::1
+[2025-08-25T06:33:01.852Z] OPTIONS /notes from ::1
+[2025-08-25T06:33:01.854Z] GET /notes from ::1
+[2025-08-25T06:33:12.579Z] OPTIONS /auth/login from ::1
+[2025-08-25T06:33:12.580Z] POST /auth/login from ::1
+[2025-08-25T06:33:12.732Z] OPTIONS /notes from ::1
+[2025-08-25T06:33:12.733Z] GET /notes from ::1
+[2025-08-25T06:34:13.513Z] OPTIONS /notes from ::1
+[2025-08-25T06:34:13.515Z] GET /notes from ::1
+[2025-08-25T06:35:16.425Z] OPTIONS /notes from ::1
+[2025-08-25T06:35:16.428Z] POST /notes from ::1
+[2025-08-25T06:39:39.535Z] OPTIONS /notes from ::1
+[2025-08-25T06:39:39.537Z] POST /notes from ::1
+[2025-08-25T06:40:10.974Z] OPTIONS /notes from ::1
+[2025-08-25T06:40:10.975Z] GET /notes from ::1
+[2025-08-25T06:44:27.410Z] OPTIONS /notes from ::1
+[2025-08-25T06:44:27.426Z] GET /notes from ::1
+[2025-08-25T06:45:07.314Z] OPTIONS /notes from ::1
+[2025-08-25T06:45:07.316Z] GET /notes from ::1
+[2025-08-25T06:45:08.379Z] GET /notes from ::1
+[2025-08-25T06:45:09.069Z] GET /notes from ::1
+[2025-08-25T06:45:10.523Z] GET /notes from ::1
+[2025-08-25T06:45:11.254Z] GET /notes from ::1
+[2025-08-25T06:45:42.798Z] OPTIONS /notes from ::1
+[2025-08-25T06:45:42.800Z] GET /notes from ::1
+[2025-08-25T06:45:43.466Z] GET /notes from ::1
+[2025-08-25T06:45:43.731Z] GET /notes from ::1
+[2025-08-25T06:45:43.900Z] GET /notes from ::1
+[2025-08-25T06:45:44.666Z] GET /notes from ::1
+[2025-08-25T06:45:45.290Z] GET /notes from ::1
+[2025-08-25T06:45:45.748Z] GET /notes from ::1
+[2025-08-25T06:45:46.161Z] GET /notes from ::1
+[2025-08-25T06:46:04.319Z] OPTIONS /notes from ::1
+[2025-08-25T06:46:04.321Z] GET /notes from ::1
+[2025-08-25T06:46:04.919Z] GET /notes from ::1
+[2025-08-25T06:46:05.137Z] GET /notes from ::1
+[2025-08-25T06:46:05.354Z] GET /notes from ::1
+[2025-08-25T06:46:05.568Z] GET /notes from ::1
+[2025-08-25T06:46:05.741Z] GET /notes from ::1
+[2025-08-25T06:46:05.941Z] GET /notes from ::1
+[2025-08-25T06:46:06.142Z] GET /notes from ::1
+[2025-08-25T06:46:06.337Z] GET /notes from ::1
+[2025-08-25T06:46:06.517Z] GET /notes from ::1
+[2025-08-25T06:46:06.708Z] GET /notes from ::1
+[2025-08-25T06:48:07.305Z] OPTIONS /auth/register from ::1
+[2025-08-25T06:48:07.306Z] POST /auth/register from ::1
+[2025-08-25T06:48:20.264Z] OPTIONS /auth/login from ::1
+[2025-08-25T06:48:20.265Z] POST /auth/login from ::1
+[2025-08-25T06:48:20.446Z] OPTIONS /notes from ::1
+[2025-08-25T06:48:20.448Z] GET /notes from ::1
+[2025-08-25T06:48:24.650Z] GET /notes from ::1
+[2025-08-25T06:48:37.305Z] OPTIONS /notes from ::1
+[2025-08-25T06:48:37.306Z] POST /notes from ::1
+[2025-08-25T06:48:39.276Z] GET /notes from ::1
+[2025-08-25T06:48:39.443Z] GET /notes from ::1
+[2025-08-25T06:48:39.665Z] GET /notes from ::1
+[2025-08-25T06:48:39.815Z] GET /notes from ::1
+[2025-08-25T06:49:44.989Z] 🚀 Server running on port 8080
+[2025-08-25T06:49:47.572Z] 🚀 Server running on port 8080
+[2025-08-25T06:49:47.727Z] 🚀 Server running on port 8080
+[2025-08-25T06:49:50.426Z] 🚀 Server running on port 8080
+[2025-08-25T06:49:53.661Z] 🚀 Server running on port 8080
+[2025-08-25T06:50:01.973Z] 🚀 Server running on port 8080
+[2025-08-25T06:50:02.233Z] 🚀 Server running on port 8080
+[2025-08-25T06:50:14.098Z] 🚀 Server running on port 8080
+[2025-08-25T06:50:14.909Z] 🚀 Server running on port 8080
+[2025-08-25T06:50:15.595Z] 🚀 Server running on port 8080
+[2025-08-25T06:50:27.810Z] 🚀 Server running on port 8080
+[2025-08-25T06:50:32.757Z] 🚀 Server running on port 8080
+[2025-08-25T06:50:50.839Z] 🚀 Server running on port 8080
+[2025-08-25T06:50:52.716Z] 🚀 Server running on port 8080
+[2025-08-25T06:51:03.666Z] ✅ Connected to MongoDB
+[2025-08-25T06:52:35.639Z] 🚀 Server running on port 8080
+[2025-08-25T06:52:37.522Z] 🚀 Server running on port 8080
+[2025-08-25T06:52:38.082Z] 🚀 Server running on port 8080
+[2025-08-25T06:52:40.907Z] ✅ Connected to MongoDB
+[2025-08-25T06:52:43.224Z] 🚀 Server running on port 8080
+[2025-08-25T06:52:47.436Z] ✅ Connected to MongoDB
+[2025-08-25T06:53:19.672Z] 🚀 Server running on port 8080
+[2025-08-25T06:53:19.879Z] 🚀 Server running on port 8080
+[2025-08-25T06:53:24.295Z] ✅ Connected to MongoDB
+[2025-08-25T06:53:25.016Z] 🚀 Server running on port 8080
+[2025-08-25T06:53:26.230Z] 🚀 Server running on port 8080
+[2025-08-25T06:53:30.459Z] ✅ Connected to MongoDB
+[2025-08-25T06:53:32.685Z] 🚀 Server running on port 8080
+[2025-08-25T06:53:38.869Z] ✅ Connected to MongoDB
+[2025-08-25T06:53:51.033Z] 🚀 Server running on port 8080
+[2025-08-25T06:53:55.234Z] 🚀 Server running on port 8080
+[2025-08-25T06:53:58.727Z] ✅ Connected to MongoDB
+[2025-08-25T06:54:20.851Z] 🚀 Server running on port 8080
+[2025-08-25T06:54:23.301Z] 🚀 Server running on port 8080
+[2025-08-25T06:54:25.774Z] ✅ Connected to MongoDB
+[2025-08-25T06:56:26.880Z] 🚀 Server running on port 8080
+[2025-08-25T06:56:31.499Z] ✅ Connected to MongoDB
+[2025-08-25T07:01:01.521Z] OPTIONS /notes from ::1
+[2025-08-25T07:01:01.527Z] GET /notes from ::1
+[2025-08-25T07:02:16.508Z] OPTIONS /notes from ::1
+[2025-08-25T07:02:16.511Z] GET /notes from ::1
+[2025-08-25T07:03:23.502Z] OPTIONS /notes from ::1
+[2025-08-25T07:03:23.504Z] GET /notes from ::1
+[2025-08-25T07:03:38.511Z] OPTIONS /notes from ::1
+[2025-08-25T07:03:38.513Z] GET /notes from ::1
+[2025-08-25T07:03:52.507Z] OPTIONS /notes from ::1
+[2025-08-25T07:03:52.508Z] GET /notes from ::1
+[2025-08-25T07:04:37.503Z] OPTIONS /notes from ::1
+[2025-08-25T07:04:37.506Z] GET /notes from ::1
+[2025-08-25T07:04:42.422Z] GET /notes from ::1
+[2025-08-25T07:05:06.518Z] OPTIONS /notes from ::1
+[2025-08-25T07:05:06.520Z] GET /notes from ::1
+[2025-08-25T07:05:37.511Z] OPTIONS /notes from ::1
+[2025-08-25T07:05:37.513Z] GET /notes from ::1
+[2025-08-25T07:06:01.288Z] OPTIONS /notes from ::1
+[2025-08-25T07:06:01.290Z] POST /notes from ::1
+[2025-08-25T07:06:32.965Z] OPTIONS /notes from ::1
+[2025-08-25T07:06:32.967Z] GET /notes from ::1
+[2025-08-25T07:08:03.383Z] OPTIONS /notes from ::1
+[2025-08-25T07:08:03.394Z] GET /notes from ::1
+[2025-08-25T07:14:17.457Z] OPTIONS /auth/login from ::1
+[2025-08-25T07:14:17.460Z] POST /auth/login from ::1
+[2025-08-25T07:14:17.614Z] OPTIONS /notes from ::1
+[2025-08-25T07:14:17.616Z] GET /notes from ::1
+[2025-08-25T07:15:27.241Z] OPTIONS /notes from ::1
+[2025-08-25T07:15:27.243Z] GET /notes from ::1
+[2025-08-25T07:15:42.076Z] OPTIONS /notes from ::1
+[2025-08-25T07:15:42.077Z] GET /notes from ::1
+[2025-08-25T07:16:32.763Z] OPTIONS /notes from ::1
+[2025-08-25T07:16:32.765Z] GET /notes from ::1
+[2025-08-25T07:16:57.543Z] OPTIONS /notes from ::1
+[2025-08-25T07:16:57.545Z] GET /notes from ::1
+[2025-08-25T07:17:43.989Z] OPTIONS /notes from ::1
+[2025-08-25T07:17:43.990Z] GET /notes from ::1
+[2025-08-25T07:17:58.133Z] OPTIONS /notes from ::1
+[2025-08-25T07:17:58.134Z] GET /notes from ::1
+[2025-08-25T07:18:06.493Z] OPTIONS /notes from ::1
+[2025-08-25T07:18:06.494Z] GET /notes from ::1
+[2025-08-25T07:18:31.165Z] OPTIONS /notes from ::1
+[2025-08-25T07:18:31.167Z] GET /notes from ::1
+[2025-08-25T07:25:43.982Z] OPTIONS /notes from ::1
+[2025-08-25T07:25:43.984Z] POST /notes from ::1
+[2025-08-25T07:27:01.906Z] OPTIONS /notes from ::1
+[2025-08-25T07:27:01.907Z] GET /notes from ::1

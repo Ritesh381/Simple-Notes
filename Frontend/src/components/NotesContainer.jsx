@@ -1,38 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NoteCard from "./NoteCard";
+import api from "../api/axios";
+import BlurText from "../ui/BlurText";
+import { useNotes } from "../hooks/useNotes";
+import LoadingOverlay from "./LoadingOverlay";
 
-const notesData = [
-  {
-    title: "First Note",
-    body: "This is the body of the first note.",
-    captionText: "Created on 2023-10-01",
-    color: "#fde047",
-  },
-  {
-    title: "Second Note",
-    body: "This is the body of the second note.",
-    captionText: "Created on 2023-10-02",
-    color: "#60a5fa",
-  },
-  {
-    title: "Third Note",
-    body: "This is the body of the third note.",
-    captionText: "Created on 2023-10-03",
-    color: "#4ade80",
-  },
-];
+function NotesContainer({inputValue}) {
+  const { notes, loading } = useNotes();
 
-function NotesContainer() {
-  const [notes, setNotes] = useState(notesData);
+  if (loading) return <LoadingOverlay message="Loading your notes..." />;
 
   return (
     <div className="flex items-center justify-center min-h-screen p-10 gap-8 flex-wrap">
-      {notes.map((note, index) => (
+      {notes.length === 0 && (
+        <BlurText
+          text="What a fresh sheeeeet 😗"
+          delay={150}
+          animateBy="words"
+          direction="top"
+          onAnimationComplete={() => {}}
+          className="text-5xl mb-8 z-1 text-white"
+        />
+      )}
+      {notes.filter(note => 
+        note.title.toLowerCase().includes(inputValue.toLowerCase()) ||
+        note.content.toLowerCase().includes(inputValue.toLowerCase()) ||
+        note.category.toLowerCase().includes(inputValue.toLowerCase())
+      )
+      .map((note, index) => (
         <NoteCard
           key={index}
           title={note.title}
-          body={note.body}
-          captionText={note.captionText}
+          body={note.content}
+          captionText={note.category}
           color={note.color}
         />
       ))}

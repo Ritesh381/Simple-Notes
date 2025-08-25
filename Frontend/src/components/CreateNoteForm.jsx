@@ -1,19 +1,19 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, forwardRef } from "react";
 import SpotlightCard from "../ui/SpotlightCard";
+import api from "../api/axios";
+import { useNotes } from "../hooks/useNotes";
+import { useUser } from "../hooks/useUsers";
 
-function CreateNoteForm({ onSubmit, onCancel, setColorPickerOpen }) {
+const CreateNoteForm = forwardRef(({ onCancel, setColorPickerOpen }, ref) => {
   const colorInputRef = useRef(null);
 
-  const [title, setTitle] = useState(() => localStorage.getItem("note_title") || "");
-  const [color, setColor] = useState(() => localStorage.getItem("note_color") || "#8b5cf6");
-  const [category, setCategory] = useState(() => localStorage.getItem("note_category") || "none");
-  const [body, setBody] = useState(() => localStorage.getItem("note_body") || "");
+  const { addNote } = useNotes();
+  const { userId } = useUser().user;
 
-  // persist values
-  useEffect(() => localStorage.setItem("note_title", title), [title]);
-  useEffect(() => localStorage.setItem("note_color", color), [color]);
-  useEffect(() => localStorage.setItem("note_category", category), [category]);
-  useEffect(() => localStorage.setItem("note_body", body), [body]);
+  const [title, setTitle] = useState("");
+  const [color, setColor] = useState("#8b5cf6");
+  const [category, setCategory] = useState("none");
+  const [body, setBody] = useState("");
 
   const handleOpenColorPicker = () => {
     setColorPickerOpen(true);
@@ -25,31 +25,46 @@ function CreateNoteForm({ onSubmit, onCancel, setColorPickerOpen }) {
     setColorPickerOpen(false); // closes automatically after selecting
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const note = { title, color, category, body };
-    
-    if(localStorage.getItem("token") === null) {
-      alert("You must be logged in to create a note.");
-      return;
-    }else{
-      
-    }
+    if (!userId) return; // safety check
 
-    onSubmit?.(note);
+    const note = {
+      created_at: Date.now(),
+      created_by: userId,
+      title,
+      color,
+      category,
+      content: body,
+    };
+
+    try {
+      addNote(note);
+
+      handleCancel();
+    } catch (err) {
+      console.error("Error saving note:", err.response?.data || err.message);
+    }
   };
 
   const handleCancel = () => {
-    localStorage.clear();
+    setTitle("");
+    setColor("#8b5cf6");
+    setCategory("none");
+    setBody("");
     onCancel();
   };
 
   return (
     <SpotlightCard
+      ref={ref} // 👈 forward ref lands here
       className="custom-spotlight-card relative overflow-hidden"
       spotlightColor={`${color}40`}
     >
-      <form onSubmit={handleSubmit} className="h-96 w-96 p-6 text-white flex flex-col gap-4">
+      <form
+        onSubmit={handleSubmit}
+        className="h-96 w-96 p-6 text-white flex flex-col gap-4"
+      >
         {/* Title + Color */}
         <div className="flex items-center gap-3">
           <input
@@ -108,7 +123,9 @@ function CreateNoteForm({ onSubmit, onCancel, setColorPickerOpen }) {
           <button
             type="submit"
             className="px-4 py-2 rounded-xl font-medium"
-            style={{ background: `linear-gradient(135deg, ${color}, ${color}CC)` }}
+            style={{
+              background: `linear-gradient(135deg, ${color}, ${color}CC)`,
+            }}
           >
             Save
           </button>
@@ -116,6 +133,9 @@ function CreateNoteForm({ onSubmit, onCancel, setColorPickerOpen }) {
       </form>
     </SpotlightCard>
   );
-}
+});
+
+// add displayName to avoid React devtools warning
+CreateNoteForm.displayName = "CreateNoteForm";
 
 export default CreateNoteForm;

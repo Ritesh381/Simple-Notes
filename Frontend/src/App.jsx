@@ -4,12 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import SignupSuggestion from "./components/SignupSuggestion";
 import NotesContainer from "./components/NotesContainer";
-import Login from "./components/Login";
+import Auth from "./components/Auth";
 import DotGrid from "./ui/DotGrid";
 import CreateNote from "./components/CreateNote";
 
 function App() {
   const [showCreateNote, setShowCreateNote] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   return (
     <div className="relative min-h-screen">
       {/* Background */}
@@ -37,16 +38,16 @@ function App() {
             path="/"
             element={
               <>
-                <NavBar onAddNote={()=>setShowCreateNote(true)}/>
+                <NavBar onAddNote={()=>setShowCreateNote(true)} inputValue={inputValue} setInputValue={setInputValue}/>
                 <SignupSuggestion />
-                <NotesContainer />
+                <NotesContainer inputValue={inputValue}/>
                 {showCreateNote && (
                   <CreateNote onClose={() => setShowCreateNote(false)} />
                 )}
               </>
             }
           />
-          <Route path="/auth" element={<Login />} />
+          <Route path="/auth" element={<Auth />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -8,7 +8,7 @@ const router = express.Router();
 // Register
 router.post("/register", async (req, res) => {
   try {
-    const { username, pass, name } = req.body;
+    const { username, pass, name, photoLink } = req.body;
     const hashedPass = await bcrypt.hash(pass, 10);
     // check if user exists
     const existing = await User.findOne({ username });
@@ -19,7 +19,7 @@ router.post("/register", async (req, res) => {
       return res.status(400).json({ message: "All fields are required" });
 
     //create new user
-    const user = new User({ username, pass: hashedPass, name });
+    const user = new User({ username, pass: hashedPass, name, photoLink: photoLink || undefined });
     await user.save();
     res.json({ message: "User created", user });
   } catch (err) {
@@ -39,7 +39,7 @@ router.post("/login", async (req, res) => {
     const isMatch = await bcrypt.compare(pass, user.pass);
     if (!isMatch) return res.status(401).json({ message: "Invalid password" });
 
-    const token = jwt.sign({ id: user._id }, "secretkey", { expiresIn: "1h" });
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
     res.json({ message: "Login Ok", token, name:user.name, username:user.username, id:user._id });
   } catch (err) {
     res

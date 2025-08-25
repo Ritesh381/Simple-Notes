@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Plus, Search, LogOut, User } from "lucide-react";
 import ElectricBorder from "../ui/ElectricBorder";
 import ClickSpark from "../ui/ClickSpark";
 import SplitText from "../ui/SplitText";
 import { useNavigate } from "react-router-dom";
+import { useUser } from "../hooks/useUsers";
 
-function NavBar({ onAddNote }) {
+function NavBar({ onAddNote, setInputValue, inputValue }) {
   const handleAnimationComplete = () => {
     console.log("All letters have animated!");
   };
@@ -28,18 +29,24 @@ function NavBar({ onAddNote }) {
     ),
     []
   );
+
   const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
 
+  const handelInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  // 🔑 Auth state from context
+  const { user, logout } = useUser();
+
   const handleLogout = () => {
-    if (!localStorage.getItem("token")) {
+    if (!user) {
       navigate("/auth");
       return;
     }
-    localStorage.removeItem("token");
-    localStorage.removeItem("username");
-    localStorage.removeItem("name");
-    navigate("/auth"); // back to auth page
+    logout();
+    navigate("/auth");
   };
 
   return (
@@ -73,6 +80,8 @@ function NavBar({ onAddNote }) {
                 placeholder="Search..."
                 className="text-black px-4 py-2 rounded-xl border-none outline-none 
              bg-white/30 backdrop-blur-md shadow-md placeholder-gray-600"
+             value={inputValue}
+             onChange={(e) => handelInputChange(e)}
               />
             </ElectricBorder>
             <ClickSpark
@@ -98,31 +107,30 @@ function NavBar({ onAddNote }) {
                       className="w-10 h-10 rounded-full border-2 border-white"
                     />
                     <span className="absolute left-1/2 -translate-x-1/2 -bottom-10 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-1">
-                      Hello, {localStorage.getItem("name") || "User"}
+                      Hello, {(user && user.name) || "User"}
                     </span>
                   </button>
 
                   {/* Dropdown */}
                   {showDropdown && (
                     <div className="absolute right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg shadow-lg ">
-                      {localStorage.getItem("token") &&
+                      {user && (
                         <button
-                        onClick={() => navigate("/profile")}
-                        className="flex items-center w-full px-4 py-2 text-left text-white hover:bg-gray-800"
-                      >
-                        <User className="w-4 h-4 mr-2" />
-                        Profile
-                      </button>}
+                          onClick={() => navigate("/profile")}
+                          className="flex items-center w-full px-4 py-2 text-left text-white hover:bg-gray-800"
+                        >
+                          <User className="w-4 h-4 mr-2" />
+                          Profile
+                        </button>
+                      )}
                       <button
                         onClick={handleLogout}
                         className={
                           "flex items-center w-full px-4 py-2 text-left hover:bg-gray-800" +
-                          (localStorage.getItem("token")
-                            ? " text-red-500"
-                            : " text-blue-500")
+                          (user && user.name ? " text-red-500" : " text-blue-500")
                         }
                       >
-                        {localStorage.getItem("token") ? (
+                        {user ? (
                           <>
                             <LogOut className="w-4 h-4 mr-2" />
                             Logout

@@ -1,62 +1,55 @@
 const express = require("express");
 const Note = require("../models/Note");
+const authMiddleware = require("../middleware/authMiddleWare");
 
 const router = express.Router();
 
-// Get all notes by user
-router.post("/notes", async (req, res) => {
+// Get all notes
+router.get("/", authMiddleware, async (req, res) => {
   try {
-    const { user } = req.body;
-    if (!user || !user.id) {
-      return res.status(400).json({ message: "User ID required" });
-    }
-
-    const notes = await Note.find({ created_by: user.id });
-    res.status(200).json({ success: true, notes });
+    const notes = await Note.find({ created_by: req.user.id });
+    res.json(notes);
   } catch (err) {
-    res.status(500).json({ error: err.message, message: "Internal server error" });
+    res.status(500).json({ error: err.message });
   }
 });
 
-// Create new note
-router.post("/createNote", async (req, res) => {
+// Create a note
+router.post("/", authMiddleware, async (req, res) => {
   try {
-    const { created_by, title, content, category, color } = req.body;
-
-    if (!created_by || !title || !content || !category || !color) {
-      return res.status(400).json({ message: "Invalid note" });
-    }
-
-    const newNote = new Note({ created_by, title, content, category, color });
-    await newNote.save();
-
-    res.status(201).json({
-      success: true,
-      message: "Note saved successfully",
-      note: newNote,
-    });
+    const { title, content, category, color } = req.body;
+    const note = new Note({ created_by: req.user.id, title, content, category, color });
+    await note.save();
+    res.status(201).json(note);
   } catch (err) {
-    res.status(500).json({ error: err.message, message: "Internal server error" });
+    res.status(500).json({ error: err.message });
   }
 });
 
-router.put("/note/:id", authMiddleware, async (req, res) => {
-  const { id } = req.params;
-  const note = await Note.findOneAndUpdate(
-    { id: id, created_by: req.user.id },
-    req.body,
-    { new: true }
-  );
-  if (!note) return res.status(404).json({ message: "Note not found" });
-  res.json(note);
+// Update a note
+router.put("/:id", authMiddleware, async (req, res) => {
+  try {
+    const note = await Note.findOneAndUpdate(
+      { _id: req.params.id, created_by: req.user.id },
+      req.body,
+      { new: true }
+    );
+    if (!note) return res.status(404).json({ message: "Note not found" });
+    res.json(note);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-router.delete("/note/:id", authMiddleware, async (req, res) => {
-  const { id } = req.params;
-  const note = await Note.findOneAndDelete({ id: id, created_by: req.user.id });
-  if (!note) return res.status(404).json({ message: "Note not found" });
-  res.json({ message: "Note deleted" });
+// Delete a note
+router.delete("/:id", authMiddleware, async (req, res) => {
+  try {
+    const note = await Note.findOneAndDelete({ _id: req.params.id, created_by: req.user.id });
+    if (!note) return res.status(404).json({ message: "Note not found" });
+    res.json({ message: "Note deleted" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
-
 
 module.exports = router;
