@@ -51,15 +51,38 @@ async function doWork(id) {
     // Collect results (fulfilled only, cleaned)
     const updateData = {};
     if (descRes.status === "fulfilled")
-      updateData.desc = cleanAIResponse(descRes.value) || "⚠️ Couldn’t generate description.";
+      updateData.desc =
+        cleanAIResponse(descRes.value) || "⚠️ Couldn’t generate description.";
     if (summaryRes.status === "fulfilled")
-      updateData.summary = cleanAIResponse(summaryRes.value) || "⚠️ Couldn’t generate summary & story.";
+      updateData.summary =
+        cleanAIResponse(summaryRes.value) ||
+        "⚠️ Couldn’t generate summary & story.";
     if (pointsRes.status === "fulfilled")
-      updateData.points = cleanAIResponse(pointsRes.value) || "⚠️ No bullet points generated.";
+      updateData.points =
+        cleanAIResponse(pointsRes.value) || "⚠️ No bullet points generated.";
     if (quizRes.status === "fulfilled")
-      updateData.quiz = cleanAIResponse(quizRes.value) || "⚠️ No quiz generated.";
+      updateData.quiz =
+        cleanAIResponse(quizRes.value) || "⚠️ No quiz generated.";
     if (flashRes.status === "fulfilled")
-      updateData.flash_cards = cleanAIResponse(flashRes.value) || "⚠️ No flashcards generated.";
+      updateData.flash_cards =
+        cleanAIResponse(flashRes.value) || "⚠️ No flashcards generated.";
+
+    // ✅ Fallbacks to avoid empty UI
+    if (
+      !updateData.points ||
+      (Array.isArray(updateData.points) && updateData.points.length === 0)
+    ) {
+      updateData.points = ["⚠️ AI couldn’t generate points for this note."];
+    }
+    if (
+      !updateData.flash_cards ||
+      (Array.isArray(updateData.flash_cards) &&
+        updateData.flash_cards.length === 0)
+    ) {
+      updateData.flash_cards = [
+        { front: "N/A", back: "⚠️ AI couldn’t generate flashcards." },
+      ];
+    }
 
     // Update note in one query
     if (Object.keys(updateData).length > 0) {
@@ -87,3 +110,4 @@ async function startWorker() {
 }
 
 module.exports = startWorker;
+ß

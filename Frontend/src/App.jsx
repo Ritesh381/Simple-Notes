@@ -7,7 +7,6 @@ import NotesContainer from "./components/NotesContainer";
 import Auth from "./components/Auth";
 import DotGrid from "./ui/DotGrid";
 import CreateNote from "./components/CreateNote";
-import Mdpage from "./components/mdpage";
 
 function App() {
   const [showCreateNote, setShowCreateNote] = useState(false);
@@ -49,7 +48,6 @@ function App() {
             }
           />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/md" element={<Mdpage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
