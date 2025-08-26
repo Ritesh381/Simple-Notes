@@ -29,8 +29,8 @@ app.use(
     origin: [
       "http://localhost:5173", // local React dev
       "https://simp-notes.vercel.app", // deployed frontend
-      "simpl-notes.vercel.app",
-      "smpl-notes.vercel.app",
+      "https://simpl-notes.vercel.app",
+      "https://smpl-notes.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
