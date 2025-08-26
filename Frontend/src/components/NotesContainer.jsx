@@ -24,15 +24,15 @@ function NotesContainer({inputValue}) {
       )}
       {notes.filter(note => 
         note.title.toLowerCase().includes(inputValue.toLowerCase()) ||
-        note.content.toLowerCase().includes(inputValue.toLowerCase()) ||
-        note.category.toLowerCase().includes(inputValue.toLowerCase())
+        note.content.toLowerCase().includes(inputValue.toLowerCase())
+        //  || note.tags.toLowerCase().includes(inputValue.toLowerCase())
       )
       .map((note, index) => (
         <NoteCard
           key={index}
           title={note.title}
           body={note.content}
-          captionText={note.category}
+          captionText={note.tags.length > 0 ? note.tags[0] : "No Tags"}
           color={note.color}
         />
       ))}

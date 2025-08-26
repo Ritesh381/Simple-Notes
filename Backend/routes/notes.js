@@ -1,6 +1,7 @@
 const express = require("express");
 const Note = require("../models/Note");
 const authMiddleware = require("../middleware/authMiddleWare");
+const jobQueue = require("../jobs/aiJobQueue")
 
 const router = express.Router();
 
@@ -17,9 +18,10 @@ router.get("/", authMiddleware, async (req, res) => {
 // Create a note
 router.post("/", authMiddleware, async (req, res) => {
   try {
-    const { title, content, category, color } = req.body;
-    const note = new Note({ created_by: req.user.id, title, content, category, color });
+    const { title, content, tags, color } = req.body;
+    const note = new Note({ created_by: req.user.id, title, content, tags, color });
     await note.save();
+    jobQueue.push(note._id)
     res.status(201).json(note);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -35,6 +37,7 @@ router.put("/:id", authMiddleware, async (req, res) => {
       { new: true }
     );
     if (!note) return res.status(404).json({ message: "Note not found" });
+    jobQueue.push(note._id)
     res.json(note);
   } catch (err) {
     res.status(500).json({ error: err.message });

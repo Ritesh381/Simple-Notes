@@ -1,9 +1,13 @@
 import React from 'react'
 
-function NoteCardBig() {
+function NoteCardBig({note}) {
   return (
-    <div>
-        
+    // background
+    <div> 
+      {/* inside */}
+        <div>
+          <h1>{note.title}</h1>
+        </div>
     </div>
   )
 }

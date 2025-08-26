@@ -51,7 +51,7 @@ function CreateNote({ onClose }) {
             <ShapeBlur
               variation={0}
               pixelRatioProp={window.devicePixelRatio || 1}
-              shapeSize={0.85}
+              shapeSize={1.2}
               roundness={0.5}
               borderSize={0.05}
               circleSize={0.5}

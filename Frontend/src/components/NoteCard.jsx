@@ -29,7 +29,6 @@ export default function NoteCard({
   showMobileWarning = true,
   showTooltip = true,
   color = "#5f4747ff",
-  category = "General",
 }) {
   const ref = useRef(null);
   const x = useMotionValue(0);
