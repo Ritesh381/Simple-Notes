@@ -9,7 +9,6 @@ const userSchema = new mongoose.Schema({
     default:
       "https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png",
   },
-  customCat: { type: [String], default: [] },
 });
 
 module.exports = mongoose.model("User", userSchema);

@@ -113,7 +113,7 @@ function NavBar({ onAddNote, setInputValue, inputValue }) {
 
                   {/* Dropdown */}
                   {showDropdown && (
-                    <div className="absolute right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg shadow-lg ">
+                    <div className="absolute right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg shadow-lg z-10">
                       {user && (
                         <button
                           onClick={() => navigate("/profile")}
