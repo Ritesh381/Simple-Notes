@@ -1,7 +1,7 @@
 // worker.js
 const jobQueue = require("./aiJobQueue"); // use relative path
 const Note = require("../models/Note");
-const { desc, summary, points, quiz, flash_card } = require("./Prompts");
+const { desc, summary, points, quiz, flash_card, short } = require("./Prompts");
 const { generateAIResponse } = require("../services/gemini");
 
 function cleanAIResponse(res) {
@@ -39,13 +39,14 @@ async function doWork(id) {
     const user_content = `Title: ${curr.title} --////-- Tags: ${curr.tags} --////-- Note: ${curr.content}`;
 
     // Run all generations in parallel
-    const [descRes, summaryRes, pointsRes, quizRes, flashRes] =
+    const [descRes, summaryRes, pointsRes, quizRes, flashRes, shortRes] =
       await Promise.allSettled([
         generateAIResponse(desc + user_content),
         generateAIResponse(summary + user_content),
         generateAIResponse(points + user_content),
         generateAIResponse(quiz + user_content),
         generateAIResponse(flash_card + user_content),
+        generateAIResponse(short + user_content),
       ]);
 
     // Collect results (fulfilled only, cleaned)
@@ -66,7 +67,9 @@ async function doWork(id) {
     if (flashRes.status === "fulfilled")
       updateData.flash_cards =
         cleanAIResponse(flashRes.value) || "⚠️ No flashcards generated.";
-
+    if (shortRes.status === "fulfilled")
+      updateData.short =
+        cleanAIResponse(shortRes.value) || "";
     // ✅ Fallbacks to avoid empty UI
     if (
       !updateData.points ||

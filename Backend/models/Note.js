@@ -25,6 +25,7 @@ const NoteSchema = new mongoose.Schema({
 
   quiz: [QuizSchema],         // structured quizzes
   flash_cards: [FlashCardSchema], // structured flashcards
+  short:{type:String}
 });
 
 NoteSchema.index({ created_by: 1, created_at: -1 }); // find user’s notes sorted by date

@@ -7,6 +7,7 @@ import NotesContainer from "./components/NotesContainer";
 import Auth from "./components/Auth";
 import DotGrid from "./ui/DotGrid";
 import CreateNote from "./components/CreateNote";
+import "./App.css";
 
 function App() {
   const [showCreateNote, setShowCreateNote] = useState(false);
@@ -15,7 +16,12 @@ function App() {
     <div className="relative min-h-screen">
       {/* Background */}
       <div
-        style={{ width: "100%", height: "100%", position: "absolute", zIndex:0}}
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          zIndex: 0,
+        }}
         className="bg-black"
       >
         <DotGrid
@@ -38,9 +44,13 @@ function App() {
             path="/"
             element={
               <>
-                <NavBar onAddNote={()=>setShowCreateNote(true)} inputValue={inputValue} setInputValue={setInputValue}/>
+                <NavBar
+                  onAddNote={() => setShowCreateNote(true)}
+                  inputValue={inputValue}
+                  setInputValue={setInputValue}
+                />
                 <SignupSuggestion />
-                <NotesContainer inputValue={inputValue}/>
+                <NotesContainer inputValue={inputValue} />
                 {showCreateNote && (
                   <CreateNote onClose={() => setShowCreateNote(false)} />
                 )}

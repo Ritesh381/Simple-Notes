@@ -147,12 +147,12 @@ const CreateNoteForm = forwardRef(({ onCancel, setColorPickerOpen }, ref) => {
             >
               {tag}
               <button
-  type="button"
-  onClick={() => removeTag(idx)}
-  className="w-6 h-6 flex items-center justify-center rounded-full 
+                type="button"
+                onClick={() => removeTag(idx)}
+                className="w-6 h-6 flex items-center justify-center rounded-full 
              transition-transform duration-200 hover:scale-110 
              hover:rotate-12 active:scale-95 text-black bg-white/10"
->
+              >
                 ✕
               </button>
             </span>

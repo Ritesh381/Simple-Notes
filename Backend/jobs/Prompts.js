@@ -29,7 +29,7 @@ const summary = `
 Create a **Markdown** output that contains two sections for the user's content:
 
 ### Quick Summary
-- One short paragraph (3–5 sentences) summarizing the main ideas in a friendly, clear tone.
+- One to four short paragraphs (based on how big the data is) summarizing the main ideas in a friendly, clear tone.
 
 ### Mini-Story
 - A short, imaginative story (about 120–200 words) that teaches the same idea with a relatable analogy.
@@ -121,8 +121,19 @@ Formatting contract (MUST follow):
 Begin.
 `;
 
-module.exports = {desc,summary,points,quiz,flash_card}
+const short = `Create a very short summary of the content provided (70-100 words), giving the rough idea of what the content is about.
 
+Safety & filtering:
+- If the user content contains disallowed, explicit, or unsafe topics (e.g., detailed violence, sexual content, illegal instructions, highly sensitive PII), OMIT those parts.
+- If a substantial portion of the note is unsafe (rough guideline: more than ~30%), return empty string
+
+Formatting contract (MUST follow):
+- Output is **only** markdown text (a single string). No JSON, no extra commentary.
+
+Begin.
+`;
+
+module.exports = { desc, summary, points, quiz, flash_card, short };
 
 // `Computer Networks
 
@@ -135,7 +146,7 @@ module.exports = {desc,summary,points,quiz,flash_card}
 // 	there are a lot of devices, so it hits the limit.
 
 //  - We need to increase the limit. The a.b.c.d is called IPv4
-//  - So now we use IPv6 
+//  - So now we use IPv6
 //  	- it is a 128bit number.
 
 // OSI model (Open system inter communication)
@@ -149,11 +160,11 @@ module.exports = {desc,summary,points,quiz,flash_card}
 // 2.  Presentation Layer (layer 6)
 // 	- It handles things like encryption/ compression/ formatting. Example: SSL / TLS
 // 3.  Session Layer (layer 5)
-// 	- manages sessions (connection between user and server for a period of time). 
+// 	- manages sessions (connection between user and server for a period of time).
 // 4.  Transport Layer (layer 4)
 // 	- reliable data delivery. Example: TCP
 // 5.  Network Layer (layer 3)
-// 	- route your data in most efficient form. Example: IP, 
+// 	- route your data in most efficient form. Example: IP,
 // 6.  Data link Layer (layer 2)
 // 	- data communication between 2 directly connected devices. Example: MAC address.
 // 7.  Physical Layer (layer 1)

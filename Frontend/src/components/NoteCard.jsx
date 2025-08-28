@@ -12,10 +12,8 @@ function getContrastColor(hex) {
   const g = parseInt(hex.substring(3, 5), 16);
   const b = parseInt(hex.substring(5, 7), 16);
 
-  // Perceived luminance formula
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-
-  return luminance > 0.6 ? "black" : "white"; 
+  return luminance > 0.6 ? "black" : "white";
 }
 
 export default function NoteCard({
@@ -29,6 +27,7 @@ export default function NoteCard({
   showMobileWarning = true,
   showTooltip = true,
   color = "#5f4747ff",
+  onClick,
 }) {
   const ref = useRef(null);
   const x = useMotionValue(0);
@@ -82,7 +81,7 @@ export default function NoteCard({
 
   return (
     <figure
-      ref={ref}
+      ref={ref} // ✅ fixed placement
       className="relative [perspective:800px] flex flex-col items-center justify-center"
       style={{
         height: containerHeight,
@@ -91,6 +90,7 @@ export default function NoteCard({
       onMouseMove={handleMouse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       {showMobileWarning && (
         <div className="absolute top-4 text-center text-sm block sm:hidden">
@@ -110,7 +110,7 @@ export default function NoteCard({
             "linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05))",
         }}
       >
-        {/* Title like in your screenshot */}
+        {/* Title */}
         <motion.div
           className="absolute top-4 left-1/2 -translate-x-1/2 font-bold px-4 py-2 rounded-xl text-sm max-w-[90%] truncate"
           style={{
@@ -122,12 +122,15 @@ export default function NoteCard({
           {title}
         </motion.div>
 
-        {/* Note Body */}
+        {/* Body with hidden scrollbar */}
         {body && (
-          <p className="mt-14 text-sm text-white line-clamp-4">{body}</p>
+          <div className="mt-14  max-h-48 text-white overflow-y-auto pr-2 scrollbar-hide no-scrollbar">
+            {body}
+          </div>
         )}
       </motion.div>
 
+      {/* Tooltip */}
       {showTooltip && (
         <motion.figcaption
           className="pointer-events-none absolute left-0 top-0 rounded-[4px] bg-white px-[10px] py-[4px] text-[10px] text-[#2d2d2d] opacity-0 z-[3] hidden sm:block"
